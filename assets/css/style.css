@@ -1,0 +1,150 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 1.6rem;
+    font-family: "Sora", sans-serif;
+}
+
+/* common */
+a {
+    text-decoration: none;
+}
+
+.container {
+    width: 1170px;
+    min-height: 100vh;
+    margin: 0 auto;
+}
+
+.btn {
+    --line-height: 60px;
+
+    display: inline-block;
+    font-family: "Sora", sans-serif;
+    min-width: 205px;
+    height: var(--line-height);
+    text-align: center;
+    border-radius: 999px;
+    border: 1px solid #2e80ce;
+    font-size: 1.6rem;
+    line-height: var(--line-height);
+    font-weight: 300;
+    color: #fff;
+    background: #2e80ce;
+}
+.btn:hover {
+    opacity: 0.9;
+    cursor: pointer;
+}
+
+/* Header */
+header {
+    background: #10375c;
+}
+
+.header-top {
+    display: flex;
+    padding-top: 30px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* logo */
+.logo {
+    display: inline-flex;
+    position: relative;
+    font-size: 1rem;
+}
+
+.logo__circle::before,
+.logo__circle::after {
+    content: "";
+    display: inline-block;
+    border-radius: 50%;
+}
+
+.logo__circle::before {
+    width: 3em;
+    height: 3em;
+    background: #2e80ce;
+}
+
+.logo__circle::after {
+    position: absolute;
+    top: 1.1em;
+    left: 1.1em;
+    width: 1.6em;
+    height: 1.6em;
+    background: #fff;
+}
+
+.logo__text {
+    margin-left: 0.6em;
+    color: #fff;
+}
+
+.logo__brand {
+    display: block;
+    line-height: 1em;
+    font-size: 1.8em;
+    font-weight: 400;
+}
+
+.logo__brand--small {
+    text-align: right;
+    font-size: 1.2em;
+    font-weight: 300;
+}
+
+/* nav */
+.navbar__list {
+    display: flex;
+    line-height: 1.75;
+}
+
+.navbar__item {
+    padding: 4px 21px;
+}
+.action__login,
+.navbar__link {
+    position: relative;
+    display: inline-block;
+    font-size: 1.6rem;
+    font-weight: 300;
+    color: #c9d2da;
+}
+.action__login:hover,
+.navbar__link--active,
+.navbar__link:hover {
+    text-shadow: 1px 0 0 currentColor;
+}
+
+.navbar__link--active::before {
+    position: absolute;
+    top: 10px;
+    left: -12px;
+    content: "";
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #fff;
+}
+
+/* action */
+.action {
+    display: flex;
+    align-items: center;
+}
+
+.action__signup {
+    min-width: 104px;
+    --line-height: 44px;
+    margin-left: 28px;
+}
