@@ -18,7 +18,6 @@ a {
 
 .container {
     width: 1170px;
-    min-height: 100vh;
     margin: 0 auto;
 }
 
@@ -59,8 +58,47 @@ a {
     color: #575f66;
 }
 
+.control {
+    display: flex;
+    column-gap: 18px;
+}
+
+.control__btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border: 1px solid #575f66;
+    outline: none;
+    color: #575f66;
+    background: #fff;
+    transition: 0.25s;
+}
+
+.control__btn:hover {
+    color: #fff;
+    border-color: #2e80ce;
+    background: #2e80ce;
+    cursor: pointer;
+}
+
+.learn-more:hover {
+    opacity: 0.8;
+}
+
+.learn-more {
+    display: inline-block;
+    margin-top: 18px;
+    font-size: 1.6rem;
+    line-height: 1.75;
+    color: #2e80ce;
+}
+
 /* Header */
 header {
+    min-height: 100vh;
     background: #10375c;
 }
 
@@ -350,10 +388,6 @@ header {
     cursor: pointer;
 }
 
-.work-item__more:hover {
-    opacity: 0.8;
-}
-
 .work__list {
     margin-top: 86px;
     display: grid;
@@ -375,14 +409,6 @@ header {
     font-weight: 300;
     line-height: 1.75;
     color: #575f66;
-}
-
-.work-item__more {
-    display: inline-block;
-    margin-top: 18px;
-    font-size: 1.6rem;
-    line-height: 1.75;
-    color: #2e80ce;
 }
 
 /* feature */
@@ -452,6 +478,10 @@ header {
     column-gap: 19px;
 }
 
+.members-item:hover .members-item__img {
+    transform: scale(1.1);
+}
+
 .members-item__image-bg {
     position: relative;
     width: 270px;
@@ -469,7 +499,7 @@ header {
     height: 290px;
     object-fit: cover;
     border-radius: 6px;
-
+    transition: 0.25s;
     color: #eaf6ff;
 }
 
@@ -490,29 +520,145 @@ header {
 }
 
 .members__control {
-    display: flex;
     justify-content: center;
     margin-top: 38px;
-    column-gap: 18px;
 }
 
-.members__control-btn {
+/* install */
+.install {
+    padding: 85px 0;
+}
+
+.install__inner {
+    display: flex;
+    border-radius: 4px;
+    background: #2e80ce;
+}
+
+.install__images {
+}
+
+.install__img {
+    display: block;
+    margin: -85px 160px 0 70px;
+    width: 284px;
+    height: 522px;
+    object-fit: cover;
+}
+
+.install__content {
     display: flex;
     justify-content: center;
-    align-items: center;
-    width: 36px;
-    height: 36px;
-    border-radius: 50%;
-    border: 1px solid #575f66;
-    outline: none;
-    color: #575f66;
-    background: #fff;
-    transition: 0.25s;
+    align-items: flex-start;
+    flex-direction: column;
+    color: #fff;
 }
 
-.members__control-btn:hover {
+.install__heading {
+    width: 489px;
     color: #fff;
-    border-color: #2e80ce;
-    background: #2e80ce;
+}
+
+.install__desc {
+    margin-top: 18px;
+    width: 586px;
+    font-size: 1.8rem;
+    font-weight: 300;
+    line-height: 1.67;
+}
+
+.install__row {
+    display: flex;
+    margin-top: 38px;
+    column-gap: 28px;
+}
+
+/* news */
+.news {
+    padding: 85px 0;
+}
+
+.news > .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.news__heading {
+    width: 470px;
+}
+
+.news__content-desc {
+    display: inline-block;
+    margin-top: 28px;
+    font-family: "Inter", sans-serif;
+    font-size: 1.8rem;
+    font-weight: 600;
+    line-height: 1.55;
+    text-decoration-line: underline;
+    text-decoration-style: solid;
+    text-decoration-skip-ink: none;
+    text-decoration-thickness: auto;
+    text-underline-offset: auto;
+    text-underline-position: from-font;
+    color: #10375c;
+}
+
+.news__control {
+    margin-top: 28px;
+}
+
+.news__list {
+    display: flex;
+    column-gap: 30px;
+}
+
+.news-item {
+    width: 270px;
+    height: 375px;
+    border: 1px solid #e8ebee;
+    border-radius: 12px;
+    background: #fff;
+    cursor: pointer;
+}
+
+.news-item__content {
+    margin: 18px 24px 21px 22px;
+}
+
+.news-item__img {
+    display: block;
+    width: 270px;
+    height: 172px;
+    object-fit: cover;
+    border-radius: 12px 12px 0 0;
+}
+
+.news-item__heading {
+    font-size: 1.6rem;
+    font-weight: 600;
+    line-height: 1.63;
+    color: #10375c;
+}
+
+.news-item__desc {
+    margin-top: 10px;
+    font-size: 1.4rem;
+    font-weight: 300;
+    line-height: 1.71;
+    color: #575f66;
+}
+
+.news-item__more {
+    margin-top: 12px;
+
+    font-family: Sora;
+    font-size: 1.4rem;
+    font-weight: 400;
+    color: #10375c;
+}
+
+.news-item__more:hover {
+    color: #2e80ce;
     cursor: pointer;
 }
