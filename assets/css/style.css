@@ -98,7 +98,7 @@ a {
 
 /* Header */
 header {
-    min-height: 100vh;
+    /* min-height: 100vh; */
     background: #10375c;
 }
 
@@ -208,6 +208,7 @@ header {
     display: flex;
     align-items: center;
     margin-top: 76px;
+    padding-bottom: 110px;
 }
 
 .hero__content {
@@ -535,9 +536,6 @@ header {
     background: #2e80ce;
 }
 
-.install__images {
-}
-
 .install__img {
     display: block;
     margin: -85px 160px 0 70px;
@@ -626,12 +624,23 @@ header {
     margin: 18px 24px 21px 22px;
 }
 
-.news-item__img {
-    display: block;
+.news-item__images {
     width: 270px;
     height: 172px;
-    object-fit: cover;
+    overflow: hidden;
     border-radius: 12px 12px 0 0;
+}
+
+.news-item__img:hover {
+    transform: scale(1.1);
+}
+
+.news-item__img {
+    display: block;
+    width: 100%;
+    height: 172px;
+    object-fit: cover;
+    transition: 0.25s;
 }
 
 .news-item__heading {
@@ -661,4 +670,196 @@ header {
 .news-item__more:hover {
     color: #2e80ce;
     cursor: pointer;
+}
+
+/* appointment */
+.appointment {
+    margin: 85px 0 170px;
+}
+
+.appointment__inner {
+    padding: 100px 78px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #f6fbff;
+}
+
+.appointment__heading {
+    position: relative;
+    font-size: 5rem;
+    font-weight: 600;
+    line-height: 1.2;
+    letter-spacing: -1px;
+    color: #10375c;
+}
+
+.appointment__heading::after {
+    position: absolute;
+    bottom: -18px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    content: "";
+    display: inline-block;
+    width: 136px;
+    height: 2px;
+    background: #2e80ce;
+}
+
+.appointment__desc {
+    margin-top: 38px;
+    width: 617px;
+    font-size: 1.6rem;
+    font-weight: 300;
+    text-align: center;
+    line-height: 1.75;
+    color: #575f66;
+}
+
+.appointment__btn {
+    margin-top: 38px;
+}
+
+/* footer */
+.footer {
+    margin-top: 85px;
+    background: #10375c;
+}
+
+.footer__rows {
+    position: relative;
+    padding-top: 100px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer__rows::after {
+    position: absolute;
+    bottom: -28px;
+    display: inline-block;
+    content: "";
+    width: 1170px;
+    height: 1px;
+    background: #406181;
+}
+
+.footer-item__heading {
+    font-family: "Open Sans";
+    font-size: 1.6rem;
+    font-weight: 600;
+    line-height: 1.75;
+    color: #fff;
+}
+
+.footer-item__link {
+    display: block;
+    font-family: "Open Sans";
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: 1.86;
+    color: #a9b3bb;
+}
+
+.footer-item__link:not(:first-child) {
+    margin-top: 10px;
+}
+
+.footer-item__contact--short {
+    margin-top: 20px;
+}
+.footer-item__heading--top,
+.footer-item__contact--long {
+    margin-top: 28px;
+}
+
+.footer-item__desc {
+    margin-top: 21px;
+    width: 336px;
+    font-family: "Open Sans", sans-serif;
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 1.75;
+    color: #a9b3bb;
+}
+
+.footer-item__social {
+    margin-top: 20px;
+    width: 116px;
+}
+
+.footer-item__icon {
+    margin-right: 4px;
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    object-fit: cover;
+}
+
+.subscribe {
+    margin-top: 28px;
+}
+
+.subscribe__desc {
+    width: 273px;
+    margin-top: 20px;
+    font-family: "Open Sans", sans-serif;
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: 1.86;
+    color: #a9b3bb;
+}
+
+.subscribe__field {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    margin-top: 10px;
+    width: 332px;
+}
+
+.subscribe__input {
+    display: block;
+
+    width: 212px;
+    height: 46px;
+
+    padding: 10px 10px;
+    font-family: "Open Sans", sans-serif;
+    font-size: 1.4rem;
+    font-weight: 400;
+
+    border-radius: 4px;
+    border: 1px solid #406181;
+    background: transparent;
+    color: #9ca8b1;
+}
+
+.subscribe__btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 118px;
+    font-family: "Open Sans", sans-serif;
+    font-size: 1.4rem;
+    font-weight: 600;
+    border-radius: 4px;
+    color: #fff;
+    background: #2e80ce;
+}
+.subscribe__btn:hover {
+    opacity: 0.9;
+}
+
+.copyright {
+    display: flex;
+    justify-content: center;
+    padding-top: 57px;
+    padding-bottom: 42px;
+    font-family: "Open Sans", sans-serif;
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: 1.86;
+    color: #aab3ba;
 }
